@@ -1,0 +1,112 @@
+/* Resetting default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Applying box-sizing border-box to all elements */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Styling the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Styling the container */
+  .container {
+    margin: 20px;
+  }
+  
+  /* Styling each section */
+  .section {
+    background-color: #f2f2f2;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Styling section titles */
+  .section-title {
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 80%;
+    line-height: 1;
+    text-align: center;
+    width: 80px;
+  }
+  
+  /* Styling individual section titles */
+  .section.chicken .section-title {
+    background-color: #ff72a0;
+    color: #000;
+  }
+  
+  .section.beef .section-title {
+    background-color: #e63946;
+    color: #fff;
+  }
+  
+  .section.sushi .section-title {
+    background-color: #f9c74f;
+    color: #000;
+  }
+  
+  /* Styling section content */
+  .section-content {
+    padding: 20px;
+  }
+  
+  /* Media queries for responsive layout */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet view */
+    .section {
+      width: calc(50% - 20px);
+      margin-right: 20px;
+      float: left;
+    }
+    
+    .section:nth-child(2n) {
+      margin-right: 0;
+      clear: none;
+    }
+    
+    .section.sushi {
+      width: calc(100% - 20px);
+      clear: both;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Desktop view */
+    .section {
+      width: calc(33.33% - 20px);
+      margin-right: 20px;
+      float: left;
+    }
+    
+    .section:nth-child(3n) {
+      margin-right: 0;
+      clear: none;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Large desktop view */
+    .section {
+      margin-right: 20px;
+    }
+    
+    .section:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  
